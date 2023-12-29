@@ -42,7 +42,7 @@ a {
   background-color: rgb(202, 48, 48);
   margin-bottom: 15px;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.15s ease-out;
 }
 
 .edit-btn {
@@ -54,12 +54,14 @@ a {
 }
 
 .clear-btn:hover,
-.submit-btn:hover {
+.submit-btn:hover,
+.edit-btn:hover {
   opacity: 0.8;
 }
 
 .clear-btn:active,
-.submit-btn:active {
+.submit-btn:active,
+.edit-btn:active {
   transform: scale(1.05);
 }
 

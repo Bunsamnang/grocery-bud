@@ -41,15 +41,15 @@ function renderGroceryList() {
       saveToStorage();
     });
   });
-}
 
-// Select all edit buttons
+  // Select all edit buttons
 
-document.querySelectorAll(".js-edit-btn").forEach((editBtn, index) => {
-  editBtn.addEventListener("click", () => {
-    editGroceryList(index);
+  document.querySelectorAll(".js-edit-btn").forEach((editBtn, index) => {
+    editBtn.addEventListener("click", () => {
+      editGroceryList(index);
+    });
   });
-});
+}
 
 // Click enter keyword instead of clicking submit button when finish input
 document.querySelector(".js-name-input").addEventListener("keydown", () => {
