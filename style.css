@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  background: rgb(255, 255, 255);
+}
+a {
+  text-decoration: none;
+  margin-top: 30px;
+  color: rgb(217, 37, 37);
+  font-size: 1.2rem;
+}
+.input-grid {
+  margin-bottom: 15px;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 300px 80px;
+  row-gap: 10px;
+  column-gap: 5px;
+}
+
+.grocery-list-grid {
+  display: grid;
+  grid-template-columns: 220px 80px 80px;
+  align-items: center;
+  row-gap: 10px;
+  column-gap: 3px;
+}
+
+.clear-btn,
+.submit-btn,
+.edit-btn {
+  margin-left: 3px;
+  height: 35px;
+  border: none;
+  color: white;
+  background-color: rgb(202, 48, 48);
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.edit-btn {
+  background-color: rgb(26, 150, 238);
+}
+
+.submit-btn {
+  background-color: rgb(40, 80, 180);
+}
+
+.clear-btn:hover,
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+.clear-btn:active,
+.submit-btn:active {
+  transform: scale(1.05);
+}
+
+.name-input {
+  border: 2px solid rgb(40, 80, 180);
+  filter: drop-shadow(2px 2px 4px rgba(40, 80, 180, 0.4));
+  height: 30px;
+}
+.name-input::placeholder {
+  padding-left: 5px;
+}
+
+.grocery-name {
+  text-align: left;
+}

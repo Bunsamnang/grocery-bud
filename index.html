@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h2>Grocery Bud</h2>
+      <div class="input-grid">
+        <input
+          type="text"
+          placeholder="eg. eggs"
+          class="name-input js-name-input"
+        />
+        <button class="submit-btn js-submit-btn">Submit</button>
+      </div>
+      <div class="grocery-list-grid js-grocery-list"></div>
+      <a href="" class="js-clear-item">Clear all items</a>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
