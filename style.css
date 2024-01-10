@@ -53,7 +53,7 @@ a {
 .submit-btn,
 .edit-btn {
   margin-left: 3px;
-  height: 35px;
+  padding: 10px;
   border: none;
   color: white;
   background-color: rgb(202, 48, 48);
@@ -85,7 +85,7 @@ a {
 .name-input {
   border: 2px solid rgb(40, 80, 180);
   filter: drop-shadow(2px 2px 4px rgba(40, 80, 180, 0.4));
-  height: 30px;
+  height: 31px;
   text-indent: 8px;
 }
 
