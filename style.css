@@ -21,6 +21,11 @@ a {
   row-gap: 10px;
   column-gap: 5px;
   margin-bottom: 15px;
+  align-items: center;
+}
+
+.input-grid {
+  align-items: stretch;
 }
 
 .grocery-list-grid {
@@ -31,40 +36,11 @@ a {
   column-gap: 3px;
 }
 
-@media screen and (max-width: 387px) {
-  .input-grid {
-    grid-template-columns: 280px 80px;
-  }
-
-  .grocery-list-grid {
-    grid-template-columns: 200px 80px 80px;
-  }
-
-  a {
-    font-size: 1.1rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
 .clear-btn,
-.submit-btn,
-.edit-btn {
+.edit-btn,
+.submit-btn {
   margin-left: 3px;
   padding: 10px;
-  border: none;
-  color: white;
-  background-color: rgb(202, 48, 48);
-  margin-bottom: 15px;
-  cursor: pointer;
-  transition: all 0.15s ease-out;
-}
-
-.submit-btn {
-  align-items: stretch;
-  margin-left: 3px;
   border: none;
   color: white;
   background-color: rgb(202, 48, 48);
@@ -95,11 +71,30 @@ a {
 
 .name-input {
   border: 2px solid rgb(40, 80, 180);
-  filter: drop-shadow(2px 2px 4px rgba(40, 80, 180, 0.4));
+  box-shadow: 0 0 6px rgba(40, 80, 180, 0.4);
   height: 31px;
+  outline: none;
   text-indent: 8px;
 }
 
 .grocery-name {
   text-align: left;
+}
+
+@media screen and (max-width: 387px) {
+  .input-grid {
+    grid-template-columns: 280px 80px;
+  }
+
+  .grocery-list-grid {
+    grid-template-columns: 200px 80px 80px;
+  }
+
+  a {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }
