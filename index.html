@@ -18,6 +18,11 @@
     />
   </head>
   <body>
+    <div class="night-or-light-mode">
+      <span class="icon-container"><i class="fa-regular fa-sun"></i></span>
+      <input type="checkbox" id="switch" class="switch" />
+      <label for="switch"></label>
+    </div>
     <div class="container">
       <h2>Grocery Bud</h2>
       <div class="input-grid">
@@ -26,12 +31,18 @@
           placeholder="eg. eggs"
           class="name-input js-name-input"
         />
-        <button class="submit-btn js-submit-btn">Submit</button>
+        <button class="submit-btn js-submit-btn">
+          <i class="fa-solid fa-check"></i>
+        </button>
       </div>
       <div class="grocery-list-grid js-grocery-list"></div>
       <a href="" class="js-clear-item">Clear all items</a>
     </div>
 
     <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5d0f70c6b2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

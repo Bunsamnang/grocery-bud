@@ -26,8 +26,8 @@ function renderGroceryList() {
   groceryList.forEach((grocery) => {
     const name = grocery;
     const html = `<div class = "grocery-name">- ${name}</div>
-                  <button class = "edit-btn js-edit-btn">Edit</button>  
-                  <button class = "clear-btn js-clear-btn">Clear</button>  
+                  <button class = "edit-btn js-edit-btn"><i class="fa-regular fa-pen-to-square"></i></button>  
+                  <button class = "clear-btn js-clear-btn"><i class="fa-solid fa-trash"></i></button>  
             `;
     groceryListContainer += html;
   });
@@ -87,3 +87,20 @@ function handleKeyDown() {
 function saveToStorage() {
   localStorage.setItem("grocery-list", JSON.stringify(groceryList));
 }
+
+// Display night or light mode screen
+
+const toggler = document.querySelector(".switch");
+const body = document.querySelector("body");
+const iconContainer = document.querySelector(".icon-container");
+toggler.addEventListener("click", () => {
+  if (toggler.checked) {
+    body.style.backgroundColor = "black";
+    body.style.color = "white";
+    iconContainer.innerHTML = '<i class="fa-regular fa-moon"></i>';
+  } else {
+    body.style.backgroundColor = "white";
+    body.style.color = "black";
+    iconContainer.innerHTML = '<i class="fa-regular fa-sun"></i>';
+  }
+});

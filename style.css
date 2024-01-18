@@ -8,6 +8,61 @@ body {
   background: rgb(255, 255, 255);
 }
 
+h2 {
+  margin-top: 30px;
+}
+
+.night-or-light-mode {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.switch {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.night-or-light-mode span {
+  position: absolute;
+  top: 29px;
+  left: -30px;
+}
+
+label {
+  width: 70px;
+  height: 35px;
+  border-radius: 40px;
+  display: block;
+  cursor: pointer;
+  background-color: black;
+  position: relative;
+  transition: all 0.3s ease-out;
+}
+
+label::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transition: all 0.5s ease-out;
+}
+
+.switch:checked + label::after {
+  background-color: black;
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.switch:checked + label {
+  background-color: white;
+}
+
 a {
   text-decoration: none;
   margin-top: 30px;
@@ -36,25 +91,29 @@ a {
   column-gap: 3px;
 }
 
-.clear-btn,
+.submit-btn,
 .edit-btn,
-.submit-btn {
+.clear-btn {
   margin-left: 3px;
   padding: 10px;
   border: none;
   color: white;
-  background-color: rgb(202, 48, 48);
+  background-color: rgb(146, 28, 28);
   margin-bottom: 15px;
   cursor: pointer;
   transition: all 0.15s ease-out;
 }
 
 .edit-btn {
-  background-color: rgb(26, 150, 238);
+  background-color: rgb(34, 61, 143);
+}
+
+i {
+  transform: scale(1.4);
 }
 
 .submit-btn {
-  background-color: rgb(40, 80, 180);
+  background-color: rgb(19, 106, 19);
 }
 
 .clear-btn:hover,
