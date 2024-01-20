@@ -14,7 +14,7 @@ h2 {
 
 .night-or-light-mode {
   position: absolute;
-  top: 5px;
+  top: -13px;
   right: 10px;
 }
 
@@ -155,5 +155,9 @@ i {
 
   h2 {
     font-size: 1.5rem;
+  }
+
+  .night-or-light-mode {
+    top: 0;
   }
 }
