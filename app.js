@@ -107,6 +107,7 @@ if (storedMode === "dark") {
 }
 
 // Add event listener to the toggle switch
+
 toggler.addEventListener("change", () => {
   // Toggle the dark mode class on the body
   body.classList.toggle("dark-mode");
