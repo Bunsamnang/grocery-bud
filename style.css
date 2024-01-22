@@ -8,6 +8,11 @@ body {
   background: rgb(255, 255, 255);
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 h2 {
   margin-top: 30px;
 }

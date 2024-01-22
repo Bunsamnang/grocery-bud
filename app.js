@@ -89,18 +89,35 @@ function saveToStorage() {
 }
 
 // Display night or light mode screen
-
 const toggler = document.querySelector(".switch");
 const body = document.querySelector("body");
 const iconContainer = document.querySelector(".icon-container");
-toggler.addEventListener("click", () => {
-  if (toggler.checked) {
-    body.style.backgroundColor = "black";
-    body.style.color = "white";
-    iconContainer.innerHTML = '<i class="fa-regular fa-moon"></i>';
-  } else {
-    body.style.backgroundColor = "white";
-    body.style.color = "black";
-    iconContainer.innerHTML = '<i class="fa-regular fa-sun"></i>';
-  }
+
+// Check if the user has a preference stored
+const storedMode = localStorage.getItem("is-dark");
+
+// Apply the stored mode or default to light mode
+if (storedMode === "dark") {
+  body.classList.add("dark-mode");
+  iconContainer.innerHTML = '<i class="fa-regular fa-moon"></i>';
+  // set the toggle.checked to be true to activate the toggle animation in css
+  toggler.checked = true;
+} else {
+  iconContainer.innerHTML = '<i class="fa-regular fa-sun"></i>';
+}
+
+// Add event listener to the toggle switch
+toggler.addEventListener("change", () => {
+  // Toggle the dark mode class on the body
+  body.classList.toggle("dark-mode");
+
+  // Store the user's preference in localStorage
+  isDarkMode = body.classList.contains("dark-mode");
+
+  localStorage.setItem("is-dark", isDarkMode ? "dark" : "light");
+
+  // Update the icon according to the condition if it's dark or light mode
+  iconContainer.innerHTML = isDarkMode
+    ? '<i class="fa-regular fa-moon"></i>'
+    : '<i class="fa-regular fa-sun"></i>';
 });
