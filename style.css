@@ -99,7 +99,7 @@ a {
 .submit-btn,
 .edit-btn,
 .clear-btn {
-  margin-left: 3px;
+  margin-left: 2px;
   padding: 10px;
   border: none;
   color: white;
@@ -134,9 +134,9 @@ i {
 }
 
 .name-input {
-  border: 2px solid rgb(40, 80, 180);
+  border: 1px solid rgb(40, 80, 180);
   box-shadow: 0 0 6px rgba(40, 80, 180, 0.4);
-  height: 31px;
+  height: 32px;
   outline: none;
   text-indent: 8px;
 }
